@@ -1,0 +1,2 @@
+data_dir_test: carla/carla_val/
+data_dir_train: carla/carla_train/

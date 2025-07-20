@@ -1,0 +1,29 @@
+learning_rate: 0.0001
+batch_size: 64
+PIXELS_PER_METER: 4
+PIXELS_AHEAD_VEHICLE: 120
+context: 5
+num_samples: 1000
+img_size: [256, 512]
+patch_size: 8
+num_contour_points: 50
+
+query_dim: 256
+mha_heads: 2
+num_tr_layers: 6
+time_embedding: 256
+attention_emb_dim: 256
+
+backbone: 'resnet18'
+# backbone: 'efficientnet'
+
+num_train_timesteps: 10
+beta_start: 0.0001
+beta_end: 0.1
+beta_schedule: "squaredcos_cap_v2"
+
+conditioning: "None" # for nuscenes, there is no class/cmd conditioning as that is not avalable in the dataset
+
+dataset_type: nuscenes
+dataset_config: "/ssd_scratch/cvit/keshav/nuscenes"
+ckpt_dir: '/ssd_scratch/cvit/keshav/fs_ckpts'

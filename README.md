@@ -2,6 +2,9 @@
 
 **Authors:** Keshav Gupta, Tejas S. Stanley, Pranjal Paul, Arun K. Singh, K. Madava Krishna
 
+## IROS 2025
+
+[![arXiv](https://img.shields.io/badge/arXiv-2507.18763-b31b1b.svg)](https://arxiv.org/abs/2507.18763)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://diffusion-freespace.github.io/)
 
 ## 📋 Table of Contents
@@ -51,7 +54,7 @@ pip install -r requirements.txt
 
 ## 📊 Dataset Preparation
 
-We perform experiments on both **CARLA** (simulated) and **NuScenes** (real-world) datasets.
+We perform experiments on both **CARLA** (simulated) and **NuScenes** (real-world) datasets. Note that while data generation, we use the given 3D bounding boxes for freespace creation but it is equivalent to use the 2D bounding boxes instead. Notably, the following 2 things are equivalent 1) The freespace can be limited to the nearest obstacle after projecting the unrestricted freespace segment created using the ego-trajectory in the image space and then limiting it to the closest 2D obsacle bounding box. 2) The freespace can be first limited to the nearest obstacle using the 3D bounding boxes or locations of the obstacles in the BEV, and then projecting this to the image space.
 
 ### 🏎️ CARLA Dataset
 
@@ -172,18 +175,21 @@ python3 train.py
 
 We welcome contributions! Please feel free to submit issues and pull requests.
 
-<!-- ## 📄 Citation
+## 📄 Citation
 
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@article{gupta2024diffusion,
-  title={Diffusion-FS: Multimodal Free-Space Prediction via Diffusion for Autonomous Driving},
-  author={Gupta, Keshav and Stanley, Tejas S. and Paul, Pranjal and Singh, Arun K. and Krishna, K. Madava},
-  year={2024}
+@misc{gupta2025diffusionfsmultimodalfreespaceprediction,
+      title={Diffusion-FS: Multimodal Free-Space Prediction via Diffusion for Autonomous Driving}, 
+      author={Keshav Gupta and Tejas S. Stanley and Pranjal Paul and Arun K. Singh and K. Madhava Krishna},
+      year={2025},
+      eprint={2507.18763},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2507.18763}, 
 }
-``` -->
-
+```
 ---
 
 📧 **Contact:** For questions or issues, please open an issue on GitHub or contact the authors.
